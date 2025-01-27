@@ -12,10 +12,15 @@ languages=("Python" "Java" "C" "C++" "JavaScript" "Ruby" "Fortran" "Rust" "CUDA"
 
 # Loop to create subdirectories and files
 for i in {1..10}; do
-    # Create subdirectory
+    n=10
+    # Create subdirectory 
+    if [ $i -eq $n ]
+    then
+        sub_dir="$main_dir/file1$i"
+    else
     sub_dir="$main_dir/file10$i"
+    fi
     mkdir "$sub_dir"
-    echo "Created subdirectory: $sub_dir"
 
     # Create .txt file and write the programming language
     txt_file="$sub_dir/tuser50$i.txt"
