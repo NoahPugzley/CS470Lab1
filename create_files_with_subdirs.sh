@@ -23,7 +23,13 @@ for i in {1..10}; do
     mkdir "$sub_dir"
 
     # Create .txt file and write the programming language
-    txt_file="$sub_dir/tuser50$i.txt"
+    if [ $i -eq $n ]
+    then
+        txt_file="$sub_dir/tuser5$i.txt"
+    else
+        txt_file="$sub_dir/tuser50$i.txt"
+    fi
+    
     echo "${languages[i-1]}" > "$txt_file"
 
     
